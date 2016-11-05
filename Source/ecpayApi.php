@@ -1,7 +1,7 @@
 <?php
 header("Content-type: text/html; charset=utf-8"); 
 /************************************
-Author		:  大猿人软件科技 
+Author		:  成都易猿网络科技 
 Time		: 2015.11.9
 Version		: V1.0
 Description : 支付宝自动交易异步通知接口文件.
