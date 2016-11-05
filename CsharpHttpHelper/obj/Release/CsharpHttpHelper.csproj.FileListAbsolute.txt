@@ -1,0 +1,23 @@
+E:\Customer Files\客户开发\C#卡发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.dll
+E:\Customer Files\客户开发\C#卡发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.pdb
+E:\Customer Files\客户开发\C#卡发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.dll
+E:\Customer Files\客户开发\C#卡发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.pdb
+E:\Customer Files\客户开发\C#卡发\Ecpay\CsharpHttpHelper\obj\Release\CsharpHttpHelper.csprojResolveAssemblyReference.cache
+E:\Customer Files\客户开发\C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.dll
+E:\Customer Files\客户开发\C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.pdb
+E:\Customer Files\客户开发\C#开发\Ecpay\CsharpHttpHelper\obj\Release\CsharpHttpHelper.csprojResolveAssemblyReference.cache
+E:\Customer Files\客户开发\C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.dll
+E:\Customer Files\客户开发\C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.pdb
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.dll
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.pdb
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.dll
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.pdb
+E:\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.dll
+E:\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.pdb
+E:\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.dll
+E:\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.pdb
+E:\客户开发\个人项目\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.dll
+E:\客户开发\个人项目\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\Release\HttpHelper.pdb
+E:\客户开发\个人项目\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\Release\CsharpHttpHelper.csprojResolveAssemblyReference.cache
+E:\客户开发\个人项目\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.dll
+E:\客户开发\个人项目\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\Release\HttpHelper.pdb

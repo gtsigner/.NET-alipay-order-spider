@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+    <item id="code"><![CDATA[ecpayforalipay]]></item>
+    <item id="name"><![CDATA[Ecpay-for支付宝]]></item>
+    <item id="description"><![CDATA[买家的交易资金直接转入卖家支付宝账户，免签约免手续费，QQ:1716771371]]></item>
+    <item id="pay_desc"><![CDATA[]]></item>
+    <item id="enabled"><![CDATA[0]]></item>
+    <item id="isonline"><![CDATA[1]]></item>
+    <item id="applies"><![CDATA[pc]]></item>
+    <item id="sort"><![CDATA[1]]></item>
+    <item id="dataline"><![CDATA[2015-11-20 14:57:09]]></item>
+    <item id="version"><![CDATA[1.0]]></item>
+    <item id="config">
+        <item id="account">
+            <item id="name"><![CDATA[支付宝账户]]></item>
+            <item id="type"><![CDATA[text]]></item>
+            <item id="value"><![CDATA[]]></item>
+            <item id="tips"><![CDATA[支付宝收款账户]]></item>
+        </item>
+        <item id="key">
+            <item id="name"><![CDATA[通知校验密钥(key)]]></item>
+            <item id="type"><![CDATA[text]]></item>
+            <item id="value"><![CDATA[]]></item>
+            <item id="tips"><![CDATA[必须和程序接口密钥一致！！！]]></item>
+        </item>
+    </item>
+</root>

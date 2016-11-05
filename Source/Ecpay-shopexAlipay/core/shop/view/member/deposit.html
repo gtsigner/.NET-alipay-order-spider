@@ -1,0 +1,74 @@
+<!-- right-->
+<!-- <{$alipayName='beixinfei@163.com'}> -->
+  <div class="MemberMain">
+  <div style="margin-right:175px;">
+
+<div class="title"><{t}>充值到预存款<{/t}></div>
+
+
+<form method="post" action="https://shenghuo.alipay.com/send/payment/fill.htm" target="_blank">
+	<input type="hidden" name="_ad" value="c">
+	<input type="hidden" name="_adType" value="alipay_my_home_aide01">
+	<input type="hidden" name="optEmail" value="<{$alipayName}>">
+	  <ul>
+	  <li> <input type="hidden" name="title" value="<{$member_id}>"></li>
+	  
+	  <li><{t}>充值金额:<{/t}> <input type="text" name="payAmount" value="100"></li>
+	  <li> <label></label> <button class="button" type="submit">支付宝充值</button></li>
+	  </ul>
+		  
+</form>
+
+
+<br>
+其他充值方式:
+<br>
+<form action="<{link ctl="paycenter" act="recharge"}>" method="post"  class="section">
+  <input type="hidden" name="member_id" value="<{$member_id}>" />
+    
+  <div class="FormWrap" style="background:none; border:none; padding:0; margin:0;">
+    <div class="division" style="border:none;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="forform">
+  <tr>
+    <th><{t}>输入充值金额：<{/t}></th>
+    <td><{input class="inputstyle" type="unsigned" name="money" required="true" id=''}></td>
+  </tr>
+    <tr>
+    <th><{t}>选择支付币别：<{/t}></th>
+    <td><{input type="select" id="payment-cur" name="payment[currency]" rows=$currencys valueColumn="cur_code" labelColumn="cur_name" value=$currency}></td>
+  </tr>
+</table>
+</div>
+
+
+<div style="border-top:1px solid #f1f1f1;"></div>
+
+    <div class="division" style="border:none;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="forform">
+  <tr>
+    <th><{t}>选择支付方式：<{/t}></th>
+    <td id="paymentlist"><{require file="common/paymethod.html"}></td>
+  </tr>
+    <tr>
+    <th></th>
+    <td><input class="btnstyle" type="submit" value="点击立刻付款" /></td>
+  </tr>
+</table>
+</div></div>
+
+</form>
+<script>
+$('payment-cur').addEvent('change', function(e){
+  new Request.HTML({update:'paymentlist'}).post('./?cart-online-payment.html',$H({cur:this.value}));
+});
+Order ={
+          paymentChange:function(){
+          /*$$('#_normal_payment th .ExtendCon input[type=radio]').fireEvent('checkedchange');
+          this.updateTotal();*/
+        }
+      };
+</script>
+
+  </div>
+  </div>
+<!-- right-->

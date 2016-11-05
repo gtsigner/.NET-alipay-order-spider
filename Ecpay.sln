@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEcpay", "MyEcpay\MyEcpay.csproj", "{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpHttpHelper", "CsharpHttpHelper\CsharpHttpHelper.csproj", "{966C2F8B-47E5-4E6D-ABFC-13501E739D25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		CD_ROM|x64 = CD_ROM|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		DVD-5|Any CPU = DVD-5|Any CPU
+		DVD-5|x64 = DVD-5|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		SingleImage|Any CPU = SingleImage|Any CPU
+		SingleImage|x64 = SingleImage|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.CD_ROM|x64.ActiveCfg = Release|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.CD_ROM|x64.Build.0 = Release|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Debug|x64.ActiveCfg = Debug|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Debug|x64.Build.0 = Debug|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.DVD-5|x64.ActiveCfg = Debug|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.DVD-5|x64.Build.0 = Debug|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Release|x64.ActiveCfg = Release|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.Release|x64.Build.0 = Release|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.SingleImage|x64.ActiveCfg = Release|x64
+		{90656CEB-BE69-4BB6-BA1D-3C3F72242B8D}.SingleImage|x64.Build.0 = Release|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.CD_ROM|x64.ActiveCfg = Release|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.CD_ROM|x64.Build.0 = Release|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Debug|x64.ActiveCfg = Debug|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Debug|x64.Build.0 = Debug|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.DVD-5|x64.ActiveCfg = Debug|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.DVD-5|x64.Build.0 = Debug|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Release|x64.ActiveCfg = Release|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.Release|x64.Build.0 = Release|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.SingleImage|x64.ActiveCfg = Release|x64
+		{966C2F8B-47E5-4E6D-ABFC-13501E739D25}.SingleImage|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+接口地址配置为www.您的域名/ecpay_alipayKey.php
+
+一.修改ecpay_alipayKey.php
+
+   修改第12行 $Key="ABCD" 将ABCD改为您的密钥
+
+二.修改core\shop\view\member\deposit.html
+
+   修改第2行<!-- <{$alipayName='you code'}> -->中的 you code 改成您的支付宝收款账户.
+
+三.修改core\shop\view\order\index.html
+
+   修改第1行<!-- <{$alipayName='you code'}> -->中的 you code 改成您的支付宝收款账户.
+
+将文件覆盖到您的shopex的根目录,即可使用在线支付宝充值自动到账.

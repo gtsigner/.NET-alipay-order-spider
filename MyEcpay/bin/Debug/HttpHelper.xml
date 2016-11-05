@@ -1,0 +1,1008 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HttpHelper</name>
+    </assembly>
+    <members>
+        <member name="T:CsharpHttpHelper.BaseBll.HttpHelperBll">
+            <summary>
+            具体实现方法  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.BaseBll.HttpHelperBll.httpbase">
+            <summary>
+            Httphelper原始访问类对象
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.BaseBll.HttpHelperBll.GetHtml(CsharpHttpHelper.HttpItem)">
+            <summary>
+            根据相传入的数据，得到相应页面数据
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.BaseBll.HttpHelperBll.GetImage(CsharpHttpHelper.HttpItem)">
+            <summary>
+            根据Url获取图片
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回图片</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.BaseBll.HttpHelperBll.FastRequest(CsharpHttpHelper.HttpItem)">
+            <summary>
+            快速Post数据这个访求与GetHtml一样，只是不接收返回数据，只做提交。
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Base.HttphelperBase">
+            <summary>
+            Http连接操作帮助类  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.GetHtml(CsharpHttpHelper.HttpItem)">
+            <summary>
+            根据相传入的数据，得到相应页面数据
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.FastRequest(CsharpHttpHelper.HttpItem)">
+            <summary>
+            快速Post数据这个访求与GetHtml一样，只是不接收返回数据，只做提交。
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.GetData(CsharpHttpHelper.HttpItem,CsharpHttpHelper.HttpResult)">
+            <summary>
+            获取数据的并解析的方法
+            </summary>
+            <param name="item"></param>
+            <param name="result"></param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.SetEncoding(CsharpHttpHelper.HttpItem,CsharpHttpHelper.HttpResult,System.Byte[])">
+            <summary>
+            设置编码
+            </summary>
+            <param name="item">HttpItem</param>
+            <param name="result">HttpResult</param>
+            <param name="ResponseByte">byte[]</param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.GetByte">
+            <summary>
+            提取网页Byte
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.SetRequest(CsharpHttpHelper.HttpItem)">
+             <summary>
+             为请求准备参数
+             </summary>
+            <param name="item">参数列表</param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.SetCer(CsharpHttpHelper.HttpItem)">
+            <summary>
+            设置证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.SetCerList(CsharpHttpHelper.HttpItem)">
+            <summary>
+            设置多个证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.SetCookie(CsharpHttpHelper.HttpItem)">
+            <summary>
+            设置Cookie
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.SetPostData(CsharpHttpHelper.HttpItem)">
+            <summary>
+            设置Post数据
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.SetProxy(CsharpHttpHelper.HttpItem)">
+            <summary>
+            设置代理
+            </summary>
+            <param name="item">参数对象</param>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            回调验证证书问题
+            </summary>
+            <param name="sender">流对象</param>
+            <param name="certificate">证书</param>
+            <param name="chain">X509Chain</param>
+            <param name="errors">SslPolicyErrors</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Base.HttphelperBase.BindIPEndPointCallback(System.Net.ServicePoint,System.Net.IPEndPoint,System.Int32)">
+            <summary>
+            通过设置这个属性，可以在发出连接的时候绑定客户端发出连接所使用的IP地址。 
+            </summary>
+            <param name="servicePoint"></param>
+            <param name="remoteEndPoint"></param>
+            <param name="retryCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Enum.AType">
+            <summary>
+            A链接的类型  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.AType.Text">
+            <summary>
+            文本链接(默认)
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.AType.Img">
+            <summary>
+            图片链接
+            </summary>
+        </member>
+        <member name="T:CsharpHttpHelper.Enum.PostDataType">
+            <summary>
+            Post的数据格式默认为string  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.PostDataType.String">
+            <summary>
+            字符串类型，这时编码Encoding可不设置
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.PostDataType.Byte">
+            <summary>
+            Byte类型，需要设置PostdataByte参数的值编码Encoding可设置为空
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.PostDataType.FilePath">
+            <summary>
+            传文件，Postdata必须设置为文件的绝对路径，必须设置Encoding的值
+            </summary>
+        </member>
+        <member name="T:CsharpHttpHelper.Enum.ResultCookieType">
+            <summary>
+            Cookie返回类型  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.ResultCookieType.String">
+            <summary>
+            只返回字符串类型的Cookie
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.ResultCookieType.CookieCollection">
+            <summary>
+            CookieCollection格式的Cookie集合同时也返回String类型的cookie
+            </summary>
+        </member>
+        <member name="T:CsharpHttpHelper.Enum.ResultType">
+            <summary>
+            返回类型  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.ResultType.String">
+            <summary>
+            表示只返回字符串 只有Html有数据
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Enum.ResultType.Byte">
+            <summary>
+            表示返回字符串和字节流 ResultByte和Html都有数据返回
+            </summary>
+        </member>
+        <member name="T:CsharpHttpHelper.Helper.Base64Helper">
+            <summary>
+            Base64帮助类
+            编码人：苏飞
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.Base64Helper.Base64ToString(System.String,System.Text.Encoding)">
+            <summary>
+            将Base64编码解析成字符串
+            </summary>
+            <param name="strbase">要解码的string字符</param>
+            <param name="encoding">字符编码方案</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.Base64Helper.StringToBase64(System.Byte[])">
+            <summary>
+            将字节数组为Base64编码
+            </summary>
+            <param name="bytebase">要编码的byte[]</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.Base64Helper.StringToBase64(System.String,System.Text.Encoding)">
+            <summary>
+            将字符串转为Base64编码
+            </summary>
+            <param name="str">要编码的string字符</param>
+            <param name="encoding">字符编码方案</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.EncodingHelper.ByteToString(System.Byte[],System.Text.Encoding)">
+            <summary>
+            将字节数组转为字符串
+            </summary>
+            <param name="b">字节数组</param>
+            <param name="e">编码，默认为Default</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.EncodingHelper.StringToByte(System.String,System.Text.Encoding)">
+            <summary>
+            将字符串转为字节数组
+            </summary>
+            <param name="s">字符串</param>
+            <param name="e">编码，默认为Default</param>
+            <returns></returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Helper.ExecJsHelper">
+            <summary>
+            用户执行JS的方法  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.ExecJsHelper.JavaScriptEval(System.String,System.String)">
+            <summary>
+            直接调用JS方法并获取返回的值
+            </summary>
+            <param name="strJs">要执行的JS代码</param>
+            <param name="main">要调用的方法名</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.ExecJsHelper.SetScriptControlType(System.String,System.Object)">
+            <summary>
+            获取ScriptControl接口类
+            </summary>
+            <param name="strJs">JS</param>
+            <param name="obj">对象</param>
+            <returns>Type</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.ExecJsHelper.GetScriptControl">
+            <summary>
+            获取ScriptControl接口对象
+            </summary>
+            <returns>ScriptControl对象</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Helper.HtmlHelper">
+            <summary>
+            Html操作相关  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HtmlHelper.GetAList(System.String)">
+            <summary>
+            获取所有的A链接
+            </summary>
+            <param name="html">要分析的Html代码</param>
+            <returns>返回一个List存储所有的A标签</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HtmlHelper.GetImgList(System.String)">
+            <summary>
+            获取所有的Img标签
+            </summary>
+            <param name="html">要分析的Html代码</param>
+            <returns>返回一个List存储所有的Img标签</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HtmlHelper.StripHTML(System.String)">
+            <summary>
+            过滤html标签
+            </summary>
+            <param name="html">html的内容</param>
+            <returns>处理后的文本</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HtmlHelper.ReplaceNewLine(System.String)">
+            <summary>
+            过滤html中所有的换行符号
+            </summary>
+            <param name="html">html的内容</param>
+            <returns>处理后的文本</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HtmlHelper.GetBetweenHtml(System.String,System.String,System.String)">
+            <summary>
+            提取Html字符串中两字符之间的数据
+            </summary>
+            <param name="html">源Html</param>
+            <param name="s">开始字符串</param>
+            <param name="e">结束字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HtmlHelper.GetHtmlTitle(System.String)">
+            <summary>
+            提取网页Title
+            </summary>
+            <param name="html">Html</param>
+            <returns>返回Title</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Helper.HttpCookieHelper">
+            <summary>
+            Cookie操作帮助类 Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpCookieHelper.GetSmallCookie(System.String)">
+            <summary>
+            根据字符生成Cookie和精简串，将排除path,expires,domain以及重复项
+            </summary>
+            <param name="strcookie">Cookie字符串</param>
+            <returns>精简串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpCookieHelper.StrCookieToCookieCollection(System.String)">
+            <summary>
+            将字符串Cookie转为CookieCollection
+            </summary>
+            <param name="strcookie">Cookie字符串</param>
+            <returns>List-CookieItem</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpCookieHelper.CookieCollectionToStrCookie(System.Net.CookieCollection)">
+            <summary>
+            将CookieCollection转为字符串Cookie
+            </summary>
+            <param name="cookie">Cookie字符串</param>
+            <returns>strcookie</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Helper.HttpUrlHelper">
+            <summary>
+            和Url相关的帮助方法  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpUrlHelper.URLDecode(System.String,System.Text.Encoding)">
+            <summary>
+            使用指定的编码对象将 URL 编码的字符串转换为已解码的字符串。
+            </summary>
+            <param name="text">指定的字符串</param>
+            <param name="encoding">指定编码默认为Default</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpUrlHelper.URLEncode(System.String,System.Text.Encoding)">
+            <summary>
+            使用指定的编码对象对 URL 字符串进行编码。
+            </summary>
+            <param name="text">指定的字符串</param>
+            <param name="encoding">指定编码默认为Default</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpUrlHelper.GetNameValueCollection(System.String)">
+            <summary>
+            将Url参数字符串转为一个Key和Value的集合
+            </summary>
+            <param name="str">要转为集合的字符串</param>
+            <returns>NameValueCollection</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpUrlHelper.GetUrlHost(System.String)">
+            <summary>
+            提取网站主机部分就是host
+            </summary>
+            <param name="url">url</param>
+            <returns>host</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpUrlHelper.GetUrlIp(System.String)">
+            <summary>
+            提取网址对应的IP地址
+            </summary>
+            <param name="url">url</param>
+            <returns>返回Url对应的IP地址</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.HttpUrlHelper.getNowURL(System.Int32)">
+            <summary>
+            获取当前页面的URL（五个数字可选 1~5 ）
+            </summary>
+            <param name="selectNO">1完整url,2域名之后,3域名之后不含参数,4只有域名,5获取参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.ImageHelper.ByteToImage(System.Byte[])">
+            <summary>
+            将字节数组转为图片
+            </summary>
+            <param name=" b">字节数组</param>
+            <returns>返回图片</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Helper.JsonHelper">
+            <summary>
+            Json操作对象  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.JsonHelper.JsonToObject``1(System.String)">
+            <summary>
+            将指定的Json字符串转为指定的T类型对象 
+            </summary>
+            <param name="jsonstr">字符串</param>
+            <returns>转换后的对象，失败为Null</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.JsonHelper.ObjectToJson(System.Object)">
+            <summary>
+            将指定的对象转为Json字符串
+            </summary>
+            <param name="obj">对象</param>
+            <returns>转换后的字符串失败为空字符串</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.Helper.MD5Helper">
+            <summary>
+            md5操作相关  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.MD5Helper.ToMD5_32(System.String)">
+            <summary>
+            传入明文，返回用MD5加密后的字符串
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns>MD5加密后的字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.Helper.MD5Helper.ToSHA1(System.String)">
+            <summary>
+            传入明文，返回用SHA1密后的字符串
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns>SHA1加密后的字符串</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.HttpHelper">
+            <summary>
+            Http帮助类  Copyright：http://www.httphelper.com/
+            版本：1.8
+            作者：苏飞
+            更新时间：2015-07-20
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.HttpHelper.bll">
+            <summary>
+            HttpHelperBLL
+            </summary>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetHtml(CsharpHttpHelper.HttpItem)">
+            <summary>
+            根据相传入的数据，得到相应页面数据
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetImage(CsharpHttpHelper.HttpItem)">
+            <summary>
+            根据Url获取图片
+            </summary>
+            <param name="item">HttpItem参数</param>
+            <returns>返回图片，错误为NULL</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.FastRequest(CsharpHttpHelper.HttpItem)">
+            <summary>
+            快速请求方法FastRequest（极速请求不接收数据,只做提交）不返回Header、Cookie、Html
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetSmallCookie(System.String)">
+            <summary>
+            根据字符生成Cookie和精简串，将排除path,expires,domain以及重复项
+            </summary>
+            <param name="strcookie">Cookie字符串</param>
+            <returns>精简串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.StrCookieToCookieCollection(System.String)">
+            <summary>
+            将字符串Cookie转为CookieCollection
+            </summary>
+            <param name="strcookie">Cookie字符串</param>
+            <returns>List-CookieItem</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.CookieCollectionToStrCookie(System.Net.CookieCollection)">
+            <summary>
+            将CookieCollection转为字符串Cookie
+            </summary>
+            <param name="cookie">Cookie字符串</param>
+            <returns>strcookie</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.URLDecode(System.String,System.Text.Encoding)">
+            <summary>
+            使用指定的编码对象将 URL 编码的字符串转换为已解码的字符串。
+            </summary>
+            <param name="text">指定的字符串</param>
+            <param name="encoding">指定编码默认为Default</param>
+            <returns>解码后字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.URLEncode(System.String,System.Text.Encoding)">
+            <summary>
+            使用指定的编码对象对 URL 字符串进行编码。
+            </summary>
+            <param name="text">指定的字符串</param>
+            <param name="encoding">指定编码默认为Default</param>
+            <returns>转码后字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetNameValueCollection(System.String)">
+            <summary>
+            将Url参数字符串转为一个Key和Value的集合
+            </summary>
+            <param name="str">要转为集合的字符串</param>
+            <returns>NameValueCollection</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetUrlHost(System.String)">
+            <summary>
+            提取网站主机部分就是host
+            </summary>
+            <param name="url">url</param>
+            <returns>host</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetUrlIp(System.String)">
+            <summary>
+            提取网址对应的IP地址
+            </summary>
+            <param name="url">url</param>
+            <returns>返回Url对应的IP地址</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.ToMD5(System.String)">
+            <summary>
+            传入明文，返回用MD%加密后的字符串32位长度
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns>用MD5加密后的字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.ToSHA1(System.String)">
+            <summary>
+            传入明文，返回用SHA1密后的字符串
+            </summary>
+            <param name="str">要加密的字符串</param>
+            <returns>SHA1加密后的字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.MD5PHP(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.JsonToObject``1(System.String)">
+            <summary>
+            将指定的Json字符串转为指定的T类型对象 
+            </summary>
+            <param name="jsonstr">字符串</param>
+            <returns>转换后的对象，失败为Null</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.ObjectToJson(System.Object)">
+            <summary>
+            将指定的对象转为Json字符串
+            </summary>
+            <param name="obj">对象</param>
+            <returns>转换后的字符串失败为空字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetAList(System.String)">
+            <summary>
+            获取所有的A链接
+            </summary>
+            <param name="html">要分析的Html代码</param>
+            <returns>返回一个List存储所有的A标签</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetImgList(System.String)">
+            <summary>
+            获取所有的Img标签
+            </summary>
+            <param name="html">要分析的Html代码</param>
+            <returns>返回一个List存储所有的Img标签</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.StripHTML(System.String)">
+            <summary>
+            过滤html标签
+            </summary>
+            <param name="html">html的内容</param>
+            <returns>处理后的文本</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.ReplaceNewLine(System.String)">
+            <summary>
+            过滤html中所有的换行符号
+            </summary>
+            <param name="html">html的内容</param>
+            <returns>处理后的文本</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetBetweenHtml(System.String,System.String,System.String)">
+            <summary>
+            提取Html字符串中两字符之间的数据
+            </summary>
+            <param name="html">源Html</param>
+            <param name="s">开始字符串</param>
+            <param name="e">结束字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetHtmlTitle(System.String)">
+            <summary>
+            提取网页Title
+            </summary>
+            <param name="html">Html</param>
+            <returns>返回Title</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.JavaScriptEval(System.String,System.String)">
+            <summary>
+            直接调用JS方法并获取返回的值
+            </summary>
+            <param name="strJs">要执行的JS代码</param>
+            <param name="main">要调用的方法名</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.GetImage(System.Byte[])">
+            <summary>
+            将字节数组转为图片
+            </summary>
+            <param name=" b">字节数组</param>
+            <returns>返回图片</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.ByteToString(System.Byte[],System.Text.Encoding)">
+            <summary>
+            将字节数组转为字符串
+            </summary>
+            <param name="b">字节数组</param>
+            <param name="e">编码，默认为Default</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.StringToByte(System.String,System.Text.Encoding)">
+            <summary>
+            将字符串转为字节数组
+            </summary>
+            <param name="s">字符串</param>
+            <param name="e">编码，默认为Default</param>
+            <returns>字节数组</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.Base64ToString(System.String,System.Text.Encoding)">
+            <summary>
+            将Base64编码解析成字符串
+            </summary>
+            <param name="strbase">要解码的string字符</param>
+            <param name="encoding">字符编码方案</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.StringToBase64(System.Byte[])">
+            <summary>
+            将字节数组为Base64编码
+            </summary>
+            <param name="bytebase">要编码的byte[]</param>
+            <returns>base字符串</returns>
+        </member>
+        <member name="M:CsharpHttpHelper.HttpHelper.StringToBase64(System.String,System.Text.Encoding)">
+            <summary>
+            将字符串转为Base64编码
+            </summary>
+            <param name="str">要编码的string字符</param>
+            <param name="encoding">字符编码方案</param>
+            <returns>base字符串</returns>
+        </member>
+        <member name="T:CsharpHttpHelper.HttpItem">
+            <summary>
+            Http请求参考类  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.URL">
+            <summary>
+            请求URL必须填写
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Method">
+            <summary>
+            请求方式默认为GET方式,当为POST方式时必须设置Postdata的值
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Timeout">
+            <summary>
+            默认请求超时时间
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ReadWriteTimeout">
+            <summary>
+            默认写入Post数据超时间
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Host">
+            <summary>
+            设置Host的标头信息
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.KeepAlive">
+            <summary>
+             获取或设置一个值，该值指示是否与 Internet 资源建立持久性连接默认为true。
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Accept">
+            <summary>
+            请求标头值 默认为text/html, application/xhtml+xml, */*
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ContentType">
+            <summary>
+            请求返回类型默认 text/html
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.UserAgent">
+            <summary>
+            客户端访问信息默认Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Referer">
+            <summary>
+            来源地址，上次访问地址
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ProtocolVersion">
+            <summary>
+              获取或设置用于请求的 HTTP 版本。返回结果:用于请求的 HTTP 版本。默认为 System.Net.HttpVersion.Version11。
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Expect100Continue">
+            <summary>
+             获取或设置一个 System.Boolean 值，该值确定是否使用 100-Continue 行为。如果 POST 请求需要 100-Continue 响应，则为 true；否则为 false。默认值为 true。
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.MaximumAutomaticRedirections">
+            <summary>
+            设置请求将跟随的重定向的最大数目
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.IfModifiedSince">
+            <summary>
+            获取和设置IfModifiedSince，默认为当前日期和时间
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Encoding">
+            <summary>
+            返回数据编码默认为NUll,可以自动识别,一般为utf-8,gbk,gb2312
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.PostEncoding">
+            <summary>
+            设置或获取Post参数编码,默认的为Default编码
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.PostDataType">
+            <summary>
+            Post的数据类型
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Postdata">
+            <summary>
+            Post请求时要发送的字符串Post数据
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.PostdataByte">
+            <summary>
+            Post请求时要发送的Byte类型的Post数据
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Cookie">
+            <summary>
+            请求时的Cookie
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.AutoRedirectCookie">
+            <summary>
+            请求时当设置allowautoredirect=true时是否自动处理Cookie
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ResultCookieType">
+            <summary>
+            Cookie返回类型,默认的是只返回字符串类型
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.CerPath">
+            <summary>
+            证书绝对路径
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.CerPwd">
+            <summary>
+            证书密码
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ClentCertificates">
+            <summary>
+            设置509证书集合
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ICredentials">
+            <summary>
+            获取或设置请求的身份验证信息。
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.IsToLower">
+            <summary>
+            是否设置为全文小写，默认为不转化
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Allowautoredirect">
+            <summary>
+            支持跳转页面，查询结果将是跳转后的页面，默认是不跳转
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Connectionlimit">
+            <summary>
+            最大连接数
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.WebProxy">
+            <summary>
+            设置代理对象，不想使用IE默认配置就设置为Null，而且不要设置ProxyIp
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ProxyUserName">
+            <summary>
+            代理Proxy 服务器用户名
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ProxyPwd">
+            <summary>
+            代理 服务器密码
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ProxyIp">
+            <summary>
+            代理 服务IP,如果要使用IE代理就设置为ieproxy
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.ResultType">
+            <summary>
+            设置返回类型String和Byte
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpItem.IPEndPoint">
+             <summary>
+             设置本地的出口ip和端口
+             </summary>]
+             <example>
+            item.IPEndPoint = new IPEndPoint(IPAddress.Parse("192.168.1.1"),80);
+             </example>
+        </member>
+        <member name="T:CsharpHttpHelper.HttpResult">
+            <summary>
+            Http返回参数类  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.Cookie">
+            <summary>
+            Http请求返回的Cookie
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.Html">
+            <summary>
+            返回的String类型数据 只有ResultType.String时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.ResultByte">
+            <summary>
+            返回的Byte数组 只有ResultType.Byte时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.StatusDescription">
+            <summary>
+            返回状态说明
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.StatusCode">
+            <summary>
+            返回状态码,默认为OK
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.ResponseUri">
+            <summary>
+            最后访问的URl
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.HttpResult.RedirectUrl">
+            <summary>
+            获取重定向的URl
+            </summary>
+        </member>
+        <member name="T:CsharpHttpHelper.Item.AItem">
+            <summary>
+            A连接对象  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.Item.AItem.Href">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.Item.AItem.Text">
+            <summary>
+            链接文本
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.Item.AItem.Img">
+            <summary>
+            链接的图片，如果是文本链接则为空
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.Item.AItem.Html">
+            <summary>
+            整个连接Html
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.Item.AItem.Type">
+            <summary>
+            A链接的类型
+            </summary>
+        </member>
+        <member name="T:CsharpHttpHelper.Item.ImgItem">
+            <summary>
+            图片对象  Copyright：http://www.httphelper.com/
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.Item.ImgItem.Src">
+            <summary>
+            图片网址
+            </summary>
+        </member>
+        <member name="P:CsharpHttpHelper.Item.ImgItem.Html">
+            <summary>
+            图片标签Html
+            </summary>
+        </member>
+        <member name="T:CsharpHttpHelper.Static.RegexString">
+            <summary>
+            正则表达式静态类
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.Alist">
+            <summary>
+            获取所有的A链接
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.ImgList">
+            <summary>
+            获取所有的Img标签
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.Nscript">
+            <summary>
+            所有的Nscript
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.Style">
+            <summary>
+            所有的Style
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.Script">
+            <summary>
+            所有的Script
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.Html">
+            <summary>
+            所有的Html
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.NewLine">
+            <summary>
+            换行符号
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.Enconding">
+             <summary>
+            获取网页编码
+             </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.AllHtml">
+            <summary>
+            所有Html
+            </summary>
+        </member>
+        <member name="F:CsharpHttpHelper.Static.RegexString.HtmlTitle">
+            <summary>
+            title
+            </summary>
+        </member>
+    </members>
+</doc>

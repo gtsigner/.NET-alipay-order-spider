@@ -1,0 +1,6 @@
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\x64\Debug\HttpHelper.dll
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\x64\Debug\HttpHelper.pdb
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\x64\Debug\HttpHelper.XML
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\x64\Debug\CsharpHttpHelper.csprojResolveAssemblyReference.cache
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\x64\Debug\HttpHelper.dll
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\x64\Debug\HttpHelper.pdb

@@ -1,0 +1,152 @@
+
+<div class="handles" style="margin-top:20px;">
+    <span class="t-handle">已使用 (<{$useNum}>)</span>
+    <span class="t-handle">所有 (<{$allNum}>)</span>
+</div>
+
+<div class="tab-items-wrap" style="padding: 5px; border: 1px solid rgb(221, 221, 221); margin-left: 5px; margin-right: 5px;">
+    <div class="tab-item">
+        <div class="tableform">
+            <!-- 使用量为0时 -->
+            <{if $useNum eq 0}>
+            <div style="padding:20px 30px;">
+                <p><span style="color:#f60;">支付方式是指顾客在商店购物支付货款的方式。</span><br />
+                    系统为您集成了在线支付、预存款和线下付款等主流方式，您只需要点击启用即可。
+                </p>
+                <p>您还没有选定支付方式,请<span id="view-payment-all" style="font-weight:bold" class="lnk">点此挑选您需要的支付方式。</span>
+                </p>
+            </div>
+            <{else}>
+            <div class="division">
+                <table class="gridlist">
+                    <tr>
+                        <td width="11%" >
+                            <img height="25" src="http://esb.shopex.cn/payments/logos/pay_alipaytrad.gif">
+                        </td>
+                        <td width="15%"><strong>支付宝即时到账-QQ:1716771371</strong></td>
+                        <td width="53%">就要付 提供的站长辅助支付系统,由支付宝提供支持,<span style="color: #FF0000;font-weight: bold;">0费率 1分钟免审核开通</span> 不区分网站类型.</td>
+                        <td>
+                            <a href="javascript:void();" onClick="diag()">配置</a>
+							|<a href="https://shop120117620.taobao.com" target="_blank">官网</a>
+                        </td>
+                    </tr>
+				   <{foreach from=$usePay item=item key=key}>
+                    <tr>
+                        <td width="11%" >
+                            <img height="25" src="http://esb.shopex.cn/payments/logos/<{$item.pay_ident}>.gif">
+                        </td>
+                        <td width="15%"><strong><{$item.pay_name}></strong></td>
+                        <td width="53%"><{$item.pay_intro}></td>
+                        <td>
+                            <{if $item.update eq true}>
+                            <a href="index.php?ctl=trading/payment&act=updateNewPayment&p[0]=<{$item.pay_ident}>&app_version=<{$item.version}>">升级</a>|
+                            <{/if}>
+
+                            <a href="index.php?ctl=trading/payment&act=editPayment&p[0]=<{$item.pay_ident}>">配置</a>
+                            |<a href="index.php?ctl=trading/payment&act=deletePayment&p[0]=<{$item.pay_ident}>">删除</a>
+
+                            <{if $item.disabled eq 'true'}>
+                            |<a href="index.php?ctl=trading/payment&act=startApp&p[0]=<{$item.pay_ident}>&t=0">启用</a>
+                            <{else}>
+                            |<a href="index.php?ctl=trading/payment&act=disApp&p[0]=<{$item.pay_ident}>&t=1">停用</a>
+                            <{/if}>
+                        </td>
+                    </tr>
+                   <{/foreach}>
+                </table>
+            </div>
+            <{/if}>
+
+            <p style="margin:0 13px 3px;">
+                还需要更多的支付方式,请<span id="view-payment-all" class="lnk">点此挑选。</span>
+            </p>
+        </div><!-- end div.tableform-->
+    </div><!-- end div.tab-item-->
+
+    <div class="tab-item">
+        <div class="tableform">
+            <h4>常用支付方式</h4>
+            <div class="division">
+                <table class="gridlist">
+                    <{foreach from=$allPay item=item key=key}>
+                        <{if $item.pay_type =='common'}>
+                        <tr>
+                            <{assign var="name" value=$item.pay_name|urlencode}>
+                            <td width="15%">
+                                <img height="25" src="http://esb.shopex.cn/payments/logos/<{$item.pay_ident}>.gif">
+                            </td>
+                            <td width="15%"><strong><{$item.pay_name}></strong></td>
+                            <td width="55%"><{$item.pay_intro}></td>
+
+                            <td>
+                                <{button type="button" label="安装" onclick="W.page('index.php?ctl=trading/payment&act=do_install&p[0]={$item.pay_ident}',{onRequest:function(){window.mainwidth=$('main').getStyle('width')}})" icon="btn_add.gif"}>
+                            </td>
+                        </tr>
+                        <{/if}>
+                    <{/foreach}>
+                </table>
+            </div>
+
+            <h4>国内其他支付方式</h4>
+            <div class="division" id="payment-china" style="overflow-y:auto; overflow-x:hidden; height:280px">
+                <table class="gridlist">
+                    <{foreach from=$allPay item=item key=key}>
+                    <{if $item.pay_type =='china'&& $item.hidden =='false'}>
+                    <tr>
+                        <{assign var="name" value=$item.pay_name|urlencode}>
+                        <td width="15%">
+                            <img height="25" src="http://esb.shopex.cn/payments/logos/<{$item.pay_ident}>.gif">
+                        </td>
+                        <td width="15%"><strong><{$item.pay_name}></strong></td>
+                        <td width="56%"><{$item.pay_intro}></td>
+
+                        <td>
+                            <{button type="button" label="安装" onclick="W.page('index.php?ctl=trading/payment&act=do_install&p[0]={$item.pay_ident}',{onRequest:function(){window.mainwidth=$('main').getStyle('width')}})" icon="btn_add.gif"}>
+                        </td>
+                    </tr>
+                    <{/if}>
+                    <{/foreach}>
+                </table>
+            </div>
+
+            <h4>国外常用支付方式</h4>
+            <div class="division" id="payment-other" style="overflow-y:auto; overflow-x:hidden; height:280px">
+                <table class="gridlist">
+                    <{foreach from=$allPay item=item key=key}>
+                    <{if $item.pay_type =='other' && $item.hidden =='false'}>
+                    <tr>
+                        <{assign var="name" value=$item.pay_name|urlencode}>
+                        <td width="15%">
+                            <img height="25" src="http://esb.shopex.cn/payments/logos/<{$item.pay_ident}>.gif">
+                        </td>
+                        <td width="15%"><strong><{$item.pay_name}></strong></td>
+                        <td width="56%"><{$item.pay_intro}></td>
+
+                        <td>
+                            <{button type="button" label="安装" onclick="W.page('index.php?ctl=trading/payment&act=do_install&p[0]={$item.pay_ident}',{onRequest:function(){window.mainwidth=$('main').getStyle('width')}})" icon="btn_add.gif"}>
+                        <td>
+                    </tr>
+                    <{/if}>
+                    <{/foreach}>
+                </table>
+            </div>
+            
+        </div><!-- end div.tableform-->
+    </div><!-- end div.tab-item-->
+</div>
+
+<script>
+function diag()
+{
+	var host = window.location.host;
+    prompt("您的充值返回地址是:","http://"+host+"/ecpay_alipayKey.php");
+}
+(function(){
+
+// 切换卡
+var itemagg = new ItemAgg('.t-handle', '.tab-item');
+$('view-payment-all').addEvent('click', function(){itemagg.render(1);});
+
+})();
+</script>
+

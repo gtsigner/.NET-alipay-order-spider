@@ -1,0 +1,98 @@
+<table id="_pay_cod" width="100%" cellpadding="0" cellspacing="0" class="liststyle data" style="display:<{if $delivery.has_cod == 1}>block<{else}>none<{/if}>">
+            <col class="span-5 ColColorGray"></col>
+            <col class="span-auto"></col>
+            <tbody>
+  <tr>
+    <th style="text-align:left;"><input type="radio" name="payment[payment]" value="-1" paytype="offline" id="payment_bank" class="x-payMethod" <{if $order.payment==-1}> checked="checked"<{/if}> /><{t}><strong><{t}>货到付款<{/t}></strong><{/t}></th>
+    <td><{t}>由我们的快递人员在将货物送到时收取货款。<{/t}></td>
+  </tr>
+  </tbody>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" class="liststyle data" id="_normal_payment">
+        <col class="span-5 ColColorGray"></col>
+        <col class="span-auto"></col>
+		<tr> 
+		<input type="hidden" id="paytypes[30]" value="alipay"> 
+			<th style="text-align:left;"> 
+			<label> 
+			<input class="x-payMethod" type="radio" name="payment[payment]" paytype="alipay" value="3000" moneyamount="" formatmoney="￥0.00" onclick="Order.paymentChange(this)" style="cursor: pointer; ">支付宝 
+			</label> 
+			</th> 
+			<td class="ColColorBlue selected"> 支付宝付款方式 </td> 
+		</tr>
+        <{foreach from=$payments item="payment" key="key"}>
+            <tr>
+                <input type="hidden" id="paytypes[<{$payment.id}>]" value="<{$payment.pay_type}>">
+                <th style="text-align:left;" >
+                    <label <{if $payment.extend}>class="ExtendCon"<{/if}>>
+                    <input class="x-payMethod" type="radio" name="payment[payment]" paytype="<{$payment.pay_type}>" value="<{$payment.id}>"<{if $order.payment==$payment.id}> checked="checked"<{/if}> moneyamount="<{$payment.money}>" formatmoney ="<{$payment.money|amount}>" onclick="Order.paymentChange(this)"/><{$payment.custom_name}><{if $payment.config.method=="1" || $payment.config.method==" "}><{if $payment.fee>0}><{t}> (支付费率: +<{/t}><{$payment.fee*100}>%)<{/if}><{else}><{if $payment.config.fee>0}><{t}> (支付费用: +<{/t}><{$payment.config.fee}>)<{/if}><{/if}>
+                    </label>
+                </th>
+                <td>
+               <{$payment.des|default:'&nbsp;'}> 
+                    
+                     <{if $payment.extend}>
+                        <{foreach from=$payment.extend item="extvalue" key="extkey"}>
+                         
+                            <div class="division paymentextend <{$extvalue.extconId}> clearfix">
+                                 <hr />
+                                       <{if $extvalue.fronttype<>'select'}>
+                                        <ul>
+                                            <{foreach from=$extvalue.value name="bank" item=extsval key=extskey}>
+                                                <li style='float:left;'>
+                                                            <{if $extvalue.fronttype=="radio"}>
+                                                                <input <{$extsval.checked}> type=<{$extvalue.fronttype}> name=<{$extvalue.name}> value=<{$extsval.value}>>
+                                                                <{if $extsval.imgurl}><{$extsval.imgurl}><{else}><{$extsval.name}><{/if}>
+                                                            <{else if $extvalue.fronttype=="checkbox"}>
+                                                                <input <{$extsval.checked}> type="<{$extvalue.fronttype}>" name="<{$extvalue.name}>[]" value="<{$extsval.value}>">
+                                                                <{if $extsval.imgurl}><{$extsval.imgurl}><{else}><{$extsval.name}><{/if}>
+                                                            <{/if}>
+                                                </li>                    
+                                            <{/foreach}>
+                                        </ul>
+                                        <{else}>
+                                            <select name=$extvalue.name>
+                                               <{foreach from=$extvalue.value item=extsval key=extskey}>
+                                                    <option value=<{$extsval.value}> <{if $extsval.checked}>selected<{/if}>><{$extsval.name}></option>
+                                                <{/foreach}>
+                                            <select>
+                                        <{/if}>   
+                           </div>
+                        <{/foreach}>
+                    <{/if}>
+                    
+                </td>
+            </tr>
+        <{/foreach}>
+        </div>
+</table>
+<script>
+  
+
+  $$('#_normal_payment th input[type=radio]').addEvent('click',function(){
+        current_paytype = $('paytypes['+$E('#_normal_payment th input[checked]').value + ']');
+        if($('billNo')){
+            if(current_paytype && current_paytype.value.toLocaleLowerCase() == "lakala"){
+                if($('billNo').getText() == ""){
+                    new Request.HTML({update:'billNo'
+                        
+                    }).post("<{$base_url}>/index.php?action_getinfo_ctl-get_billno.html",{order_id:"<{$order.order_id}>", payment_id:$E('#_normal_payment input[checked]').value});
+                }
+                $('billNo').setStyle('display','block');
+            }
+            else
+                $('billNo').setStyle('display','none');
+        }
+
+                 var tr=this.getParent('tr');
+                 var table=this.getParent('table');
+                 if(table.retrieve('temcheck')){
+                    table.retrieve('temcheck').removeClass('ColColorBlue selected');
+                 }
+                 table.store('temcheck',tr.getElements('td').addClass('ColColorBlue selected'));
+           }).setStyle('cursor','pointer');
+  if(_checked =$E('#_normal_payment th input[checked]')){
+     _checked.fireEvent('click');
+  }
+  
+</script>

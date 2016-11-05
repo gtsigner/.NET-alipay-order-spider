@@ -1,0 +1,4 @@
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\x64\Release\HttpHelper.dll
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\bin\x64\Release\HttpHelper.pdb
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\x64\Release\HttpHelper.dll
+E:\Customer Files\客户开发\个人项目C#开发\Ecpay\CsharpHttpHelper\obj\x64\Release\HttpHelper.pdb
